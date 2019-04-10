@@ -12,6 +12,7 @@ const navAnchors = document.querySelector('.nav');
 // console.log(navAnchors);
 navAnchors.addEventListener('dblclick', function(event){
     console.log(`navAnchors fired!`)
+    
 })
 
 const headerArea = document.querySelector("p");
@@ -85,3 +86,10 @@ h4.addEventListener('click', function(event){
     console.log(`h4 fired!`)
     event.stopPropagation();
 });
+
+
+const anchors = Array.from(document.getElementsByTagName('a'));
+anchors.forEach(element => element.addEventListener('click', event => {
+  event.preventDefault();
+  element.style.color = 'crimson';
+}));
