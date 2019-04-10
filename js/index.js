@@ -6,6 +6,7 @@ const navLogo = document.querySelector('.logo-heading');
 // console.log(navLogo);
 navLogo.addEventListener('mouseover', function(event){
     console.log(`navLogo fired!`)
+    TweenMax.to(".logo-heading", 3, {x:200, ease: Bounce.easeOut});
 })
 
 const navAnchors = document.querySelector('.nav'); 
@@ -26,6 +27,7 @@ const images = document.querySelector('img');
 // console.log(images);
 images.addEventListener('mouseover', function(event) {
     console.log(`this images event is working`)
+    TweenMax.to(".intro", 2, {scale: 2, ease: Bounce.easeOut});
     event.stopPropagation();
 })
 
@@ -77,6 +79,7 @@ const signMeUpBtn = document.querySelector('.btn');
 // console.log(signMeUpBtn);
 signMeUpBtn.addEventListener('click', function(event){
     console.log(`signMeUpBtn fired!`)
+    TweenMax.to(".destination", 2, {x:100, ease: Bounce.easeOut});
     event.stopPropagation();
 });
 
